@@ -1,9 +1,11 @@
 
-$menu = "opciones:`n1) Listar adaptadores de red`n2) Crear nuevo SwitchTeam`n3) Eliminar SwitchTeam`n"
+$menu = "| opciones:                    |`n| 1) Listar adaptadores de red |`n| 2) Crear nuevo SwitchTeam    |`n| 3) Eliminar SwitchTeam       |"
 $Host.UI.RawUI.ForegroundColor = 'Yellow'
+" ------------------------------"
 $menu
+" ------------------------------`n"
 
-do#Itera hasta que se ponga un valor válido ffffffffAAAAAAAAA
+do #Itera hasta que se ponga un valor válido ffffffffAAAAAAAAA
 {
 	$opcionMenu = Read-host -prompt "Ingresa un numero de seleccion"
 	#si opcionMenu esta vacio vuelve a preguntar
@@ -17,12 +19,12 @@ until($opcionMenu -match '^\d+$' )
 
 #Se puede intentar realizat todo este bloque if else con un switch
 #Este bloque ejecuta todo el programa principal
-if ($opcionMenu -eq 1)#Lista todos los adaptadores
+if ($opcionMenu -eq 1) #Lista todos los adaptadores
 {
 	$array = Get-NetAdapter #Guarda el comando para listar los adaptadores
 	$ColumName = $array | Select-Object -ExpandProperty Name #Extrae unicamente los nombres
 	$columName
-}elseif ($opcionMenu -eq 2)# Crea un nuevo equipo
+}elseif ($opcionMenu -eq 2) # Crea un nuevo equipo
 {
 	Write-host "Elija al menos dos adaptadores..."
 	$array = Get-NetAdapter #Coge toda la tabla
