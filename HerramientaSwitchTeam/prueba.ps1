@@ -1,4 +1,26 @@
 
+@"
+                                          .-.                     .-.
+                                       .--' /                     \ '--.
+                                       '--. \       _______       / .--'
+                                           \ \   .-"       "-.   / /
+                                            \ \ /             \ / /
+                                             \ /               \ /
+                                              \|   .--. .--.   |/
+                                               | )/   | |   \( |
+                                               |/ \__/   \__/ \|
+                                               /      /^\      \
+                                               \__    '='    __/
+                                                 | \       / |
+                                                 |  UUUUUUU  |
+                                                 \  nnnnnnn  /
+                                                   -._____.-
+                                                    / / \ \
+                                                   / /   \ \
+                                                  / /     \ \
+                                               ,-' (       ) `-,
+                                               `-'._)     (_.'-`
+"@
 $menu = "`t`t`t`t`t| opciones:                    |`n`t`t`t`t`t ------------------------------`n`t`t`t`t`t| 1) Listar adaptadores de red |`n`t`t`t`t`t| 2) Crear nuevo SwitchTeam    |`n`t`t`t`t`t| 3) Eliminar SwitchTeam       |"
 $Host.UI.RawUI.ForegroundColor = 'Yellow'
 "`t`t`t`t`t ------------------------------"
