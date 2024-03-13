@@ -1,9 +1,9 @@
 
-$menu = "| opciones:                    |`n| 1) Listar adaptadores de red |`n| 2) Crear nuevo SwitchTeam    |`n| 3) Eliminar SwitchTeam       |"
+$menu = "`t`t`t`t`t| opciones:                    |`n`t`t`t`t`t ------------------------------`n`t`t`t`t`t| 1) Listar adaptadores de red |`n`t`t`t`t`t| 2) Crear nuevo SwitchTeam    |`n`t`t`t`t`t| 3) Eliminar SwitchTeam       |"
 $Host.UI.RawUI.ForegroundColor = 'Yellow'
-" ------------------------------"
+"`t`t`t`t`t ------------------------------"
 $menu
-" ------------------------------`n"
+"`t`t`t`t`t ------------------------------`n"
 
 do #Itera hasta que se ponga un valor válido ffffffffAAAAAAAAA
 {
@@ -23,7 +23,10 @@ if ($opcionMenu -eq 1) #Lista todos los adaptadores
 {
 	$array = Get-NetAdapter #Guarda el comando para listar los adaptadores
 	$ColumName = $array | Select-Object -ExpandProperty Name #Extrae unicamente los nombres
-	$columName
+	for ($i = 0; $i -lt $columName.count; $i++){
+		"Adaptador $($i + 1): $($columName[$i])"
+	}
+	
 }elseif ($opcionMenu -eq 2) # Crea un nuevo equipo
 {
 	Write-host "Elija al menos dos adaptadores..."
