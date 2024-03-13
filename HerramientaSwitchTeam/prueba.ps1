@@ -3,7 +3,7 @@ $menu = "opciones:`n1) Listar adaptadores de red`n2) Crear nuevo SwitchTeam`n3) 
 $Host.UI.RawUI.ForegroundColor = 'Yellow'
 $menu
 
-do#Itera hasta que se ponga un valor válido ffffffff
+do#Itera hasta que se ponga un valor válido ffffffffAAAAAAAAA
 {
 	$opcionMenu = Read-host -prompt "Ingresa un numero de seleccion"
 	#si opcionMenu esta vacio vuelve a preguntar
