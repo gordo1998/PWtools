@@ -1,3 +1,4 @@
+
 $menu = "opciones:`n1) Listar adaptadores de red`n2)Crear nuevo SwitchTeam`n3)Eliminar SwitchTeam`n"
 $Host.UI.RawUI.ForegroundColor = 'Yellow'
 $menu
@@ -54,28 +55,29 @@ if ($opcionMenu -eq 1)
 		
 	}until($cantAdaptadores -match '^\d+$')
 	
+	
+		
 	$adaptadores = New-Object System.Collections.ArrayList
+	$adapterNoExist = $false
 	for ($y = 0; $y -lt $cantAdaptadores; $y = $y + 1)
 	{
 		do {
 			$adapter = Read-host -prompt "Elije el adaptador"
-		}until($adapter -match '^\d+$')
+			$adapterNoExist = ipconfig | Select-String -Pattern "\b$($arrayDos[$adapter])\b" -Quiet
+			Write-Host "adaptador: $adapterNoExist"
+			if ($adapterNoExist -ne $true){
+				Write-Host "El adapatador ya se encuentra en un equipo!"
+			}
+		}until($adapter -match '^\d+$' -and $adapterNoExist -eq $true)
 		
 		$adaptadores.Add($arrayDos[$adapter])
 	}
 	
-	try {
-		
-	}
-	catch {
-
-	}
-
 	do {
 		$nameTeam = [String] (Read-host -prompt "Ahora elije el nombre de grupo")
 		if(($arrayDos -contains $nameTeam)){
 			$Host.UI.RawUI.ForegroundColor = 'Red'
-			Write-Host "Ya existe este equipo!!"
+			Write-Host "Ya existe este nombre equipo!!"
 			$Host.UI.RawUI.ForegroundColor = 'Yellow'
 		}
 
@@ -85,7 +87,8 @@ if ($opcionMenu -eq 1)
 	$adaptadores = $adaptadores.ToArray([String])
 
 	New-NetSwitchTeam -Name $nameTeam -TeamMembers $adaptadores
-
+			
+		
 
 }elseif($opcionMenu -eq 3)
 {
