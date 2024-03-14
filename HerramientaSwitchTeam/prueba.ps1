@@ -1,5 +1,5 @@
 
-@"
+$imageOne = @"
                             ______       _            _        _______                
                            / _____)     (_)  _       | |      (_______)               
                           ( (____  _ _ _ _ _| |_ ____| |__        _ _____ _____ ____  
@@ -7,10 +7,11 @@
                            _____) ) | | | | | |( (___| | | |     | | ____/ ___ | | | |
                           (______/ \___/|_|  \__)____)_| |_|     |_|_____)_____|_|_|_|
 "@
-$Host.UI.RawUI.ForegroundColor = 'Red'
 
-$Host.UI.RawUI.ForegroundColor = 'Red'
-$menu = "`t`t`t`t`t| opciones:                    |`n`t`t`t`t`t ------------------------------`n`t`t`t`t`t| 1) Listar adaptadores de red |`n`t`t`t`t`t| 2) Crear nuevo SwitchTeam    |`n`t`t`t`t`t| 3) Eliminar SwitchTeam       |"
+$Host.UI.RawUI.ForegroundColor = 'DarkCyan'
+$imageOne
+$Host.UI.RawUI.ForegroundColor = 'Yellow'
+$menu = "`t`t`t`t`t| opciones:                    |`n`t`t`t`t`t|------------------------------|`n`t`t`t`t`t| 1) Listar adaptadores de red |`n`t`t`t`t`t| 2) Crear nuevo SwitchTeam    |`n`t`t`t`t`t| 3) Eliminar SwitchTeam       |"
 $Host.UI.RawUI.ForegroundColor = 'Yellow'
 "`t`t`t`t`t ------------------------------"
 $menu
