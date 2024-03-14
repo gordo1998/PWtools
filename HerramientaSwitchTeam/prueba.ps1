@@ -8,8 +8,33 @@ $imageOne = @"
                           (______/ \___/|_|  \__)____)_| |_|     |_|_____)_____|_|_|_|
 "@
 
+$herramienta = @"
+                                   MMMMMMMMMMMWX0kddodxkOXWMMMMMMMMMMMWXXWM
+                                   MMMMMMMWXkl,.         .:OWMMMMMMMNOc.'dN
+                                   MMMMMWKl.        .,clodd0WMMMMMWk,   ;OW
+                                   MMMMWk'         :0WMMMMMMMMMMMW0:..'xNMM
+                                   MMMNd.          cXMMMMMMMMMMW0ocd0KXWMMM
+                                   MWXl.           .dKNMMMMMMNOlcdXWMMMMMMM
+                                   Kl'...         .'..,cxXMNkccxXMMMMMMMMMM
+                                   '    ..'cddl;'..      'ccckNMMMMMMMMMMMM
+                                   x;.   'OWMMMWO,         .oXWMMMMMMMMMMMM
+                                   MNOc,lKWMMMMNkc,.         'dXWMMMMMMMMMM
+                                   MMMWWWMMMMXx:. ...          .oKWMMMMMMMM
+                                   MMMMMMMW0o,',;'.  .,,.        .lKWMMMMMM
+                                   MMMMMNOc,',:;;;,..oKN0c.        .l0WMMMM
+                                   MMMXx;'',;;,;,',lKWMMMWO:.        .c0WMM
+                                   W0o,'',,,,,,',lKWMMMMMMMNk;         .cOW
+                                   c'''',,,,,',lKWMMMMMMMMMMMNx,         .:
+                                    ...,,,,',lKWMMMMMMMMMMMMMMMXd'         
+                                   o. ...',lKWMMMMMMMMMMMMMMMMMMMXo.     .o
+                                   W0o;',oKWMMMMMMMMMMMMMMMMMMMMMMWKo,';o0W
+                                   MMMWXNWMMMMMMMMMMMMMMMMMMMMMMMMMMWNXWMMM
+"@
+
 $Host.UI.RawUI.ForegroundColor = 'DarkCyan'
 $imageOne
+$Host.UI.RawUI.ForegroundColor = 'Red'
+$herramienta
 $Host.UI.RawUI.ForegroundColor = 'Yellow'
 $menu = "`t`t`t`t`t| opciones:                    |`n`t`t`t`t`t|------------------------------|`n`t`t`t`t`t| 1) Listar adaptadores de red |`n`t`t`t`t`t| 2) Crear nuevo SwitchTeam    |`n`t`t`t`t`t| 3) Eliminar SwitchTeam       |"
 $Host.UI.RawUI.ForegroundColor = 'Yellow'
